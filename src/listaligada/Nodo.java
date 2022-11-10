@@ -8,23 +8,23 @@ package listaligada;
  *
  * @author HP
  */
-public class Nodo {
+public class Nodo <T>{
     
     //Variables
-    private int dato; //Dato almacenado
+    private T dato; //Dato almacenado
     private Nodo siguiente; //Apuntador del siguiente nodo
 
     //Constructor
-    public Nodo(int d) {
+    public Nodo(T d) {
         this.dato = d;
         this.siguiente = null;
     }
 
-    public int getDato() {
+    public T getDato() {
         return dato;
     }
 
-    public void setDato(int dato) {
+    public void setDato(T dato) {
         this.dato = dato;
     }
 
