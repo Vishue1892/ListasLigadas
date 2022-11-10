@@ -35,7 +35,7 @@ public class TestingListaligada {
         System.out.println("--------------------------");
         System.out.println("Contenido lista ligada");
         lista.printList();
-        
+        /*
         System.out.println("---------------------------");
         System.out.println("Inserccion de un nuevo nodo");
         System.out.println("Escribe el elemente a insertar");
@@ -49,6 +49,21 @@ public class TestingListaligada {
         System.out.println("--------------------------------");
         System.out.println("Contenido de la lista ligada");
         lista.printList();
-        
+        */
+        ListaLigada<String> lista2=new ListaLigada<>();
+        System.out.println("------Creando una lista de Strings----------");
+        for(;;){
+            System.out.println("Escriba dato String para agregar  la lista: ");
+            entrada=bufer.readLine();
+            lista2.add(entrada);
+            System.out.println("¿Quieres insertar mas datos?");
+            entrada=bufer.readLine();
+            respuesta=entrada.charAt(dato);
+                 if(respuesta=='n' || respuesta =='N')
+            break;
+          }
+            System.out.println("Contenido de la lista de strings");
+            lista2.printList();
+           
+        }
     }
-}
