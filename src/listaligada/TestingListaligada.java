@@ -56,14 +56,32 @@ public class TestingListaligada {
             System.out.println("Escriba dato String para agregar  la lista: ");
             entrada=bufer.readLine();
             lista2.add(entrada);
-            System.out.println("¿Quieres insertar mas datos?");
+            System.out.println("¿Quieres agregar mas datos? (s/n):");
             entrada=bufer.readLine();
-            respuesta=entrada.charAt(dato);
+            respuesta=entrada.charAt(0);
                  if(respuesta=='n' || respuesta =='N')
             break;
           }
             System.out.println("Contenido de la lista de strings");
             lista2.printList();
            
+            
+        ListaLigada list = new ListaLigada();
+        for(;;){
+        System.out.println("¿Quieres eliminar un dato del principio? (s/n):");
+        entrada=bufer.readLine();
+        respuesta=(char) list.borrarDelInicio();
+        lista.add(dato);
+        System.out.println("Se ha eliminado el dato de la lista");
+        System.out.println("¿Quieres eliminar mas datos? (s/n):");
+        entrada=bufer.readLine();
+        respuesta=entrada.charAt(0);
+        if(respuesta=='n' || respuesta =='N')
+            break;
+    }
+        System.out.println("--------------------------");
+        System.out.println("Contenido lista ligada");
+        lista.printList();
+            
         }
     }
